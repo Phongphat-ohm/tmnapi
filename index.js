@@ -68,13 +68,13 @@ async function getWallet(code, phoneNumber) {
 
 app.post('/1', (req, res) => {
     const url = req.body;
-//     getWallet(url).then(result => {
-//         res.send(result)
-//     }).catch(error => {
-//         res.status(400).send("Error: " + error);
-//     });
+    getWallet(url).then(result => {
+        res.send(result)
+    }).catch(error => {
+        res.status(400).send("Error: " + error);
+    });
 //     log(url)
-    res.send(url)
+//     res.send(url)
 });
 
 // getWallet("https://gift.truemoney.com/campaign/?v=bgavSkg5hspZYKzcdk", 0994475548).then(result => {
